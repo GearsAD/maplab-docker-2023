@@ -13,6 +13,9 @@ run:
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 	--device=/dev/dri:/dev/dri \
-	-v ./datasets:/datasets maplab:latest
+	-v ./datasets:/datasets \
+	-v ./maps:/maps \
+	-v ./bin:/bin \
+	maplab:latest
 
 .PHONY: all
